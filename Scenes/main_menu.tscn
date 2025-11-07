@@ -1,125 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2m05u0q76ghu"]
 
 [ext_resource type="Script" path="res://Scripts/Menu/MenuHandler.gd" id="1_c0l2o"]
+[ext_resource type="PackedScene" uid="uid://1kymo7h5j33h" path="res://Scenes/UI/title_and_buttons.tscn" id="2_iol0q"]
+[ext_resource type="PackedScene" uid="uid://6ytihgrolily" path="res://Scenes/UI/instructions.tscn" id="3_ke8p0"]
 
-[sub_resource type="FontFile" id="FontFile_u6gfg"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/1/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/1/0/ascent = 0.0
-cache/0/1/0/descent = 0.0
-cache/0/1/0/underline_position = 0.0
-cache/0/1/0/underline_thickness = 0.0
-cache/0/1/0/scale = 1.0
-cache/0/1/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/1/0/kerning_overrides/1/0 = Vector2(0, 0)
-cache/0/1/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/1/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
-
-[sub_resource type="LabelSettings" id="LabelSettings_f47vj"]
-font = SubResource("FontFile_u6gfg")
-font_size = 50
-font_color = Color(0, 1, 0, 1)
-
-[node name="Main Menu" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="Title and Buttons" type="Control" parent="."]
+[node name="Home Main Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_c0l2o")
 
-[node name="Play" type="Button" parent="Title and Buttons"]
+[node name="Title and Buttons" parent="." instance=ExtResource("2_iol0q")]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -82.0
-offset_top = -52.5
-offset_right = 82.0
-offset_bottom = 52.5
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="Label" type="Label" parent="Title and Buttons/Play"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -16.5
-offset_top = -11.5
-offset_right = 16.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Play"
+[node name="Fader" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1162.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 1)
 
-[node name="Instructions" type="Button" parent="Title and Buttons"]
+[node name="Instructions" parent="." instance=ExtResource("3_ke8p0")]
+visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = 81.0
-offset_right = 81.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="Title and Buttons/Instructions"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -46.5
-offset_top = -11.5
-offset_right = 46.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Instructions"
-
-[node name="Label" type="Label" parent="Title and Buttons"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -178.0
-offset_top = 81.0
-offset_right = 179.0
-offset_bottom = 148.0
-grow_horizontal = 2
-scale = Vector2(0.998246, 1)
-text = "Nutrition Game"
-label_settings = SubResource("LabelSettings_f47vj")

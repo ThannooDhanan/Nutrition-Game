@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhjkarejib11a"]
+
+[ext_resource type="Texture2D" uid="uid://cese8i3n5frkh" path="res://icon.svg" id="1_buchq"]
+[ext_resource type="StyleBox" uid="uid://nkjoupbuhko6" path="res://Scenes/Game Pieces/Contain_item.tres" id="1_u86pk"]
+[ext_resource type="StyleBox" uid="uid://ctd60pw25aql8" path="res://Scenes/Game Pieces/Connector_flat.tres" id="3_4c064"]
+[ext_resource type="StyleBox" uid="uid://d1iouk1ac3oqy" path="res://Scenes/Game Pieces/Connector.tres" id="4_hb68t"]
+[ext_resource type="StyleBox" uid="uid://ba3d2qiuqbki5" path="res://Scenes/Game Pieces/Connector_pressed.tres" id="5_cupxh"]
+
+[sub_resource type="Theme" id="Theme_keqf7"]
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = ExtResource("3_4c064")
+Button/styles/normal = ExtResource("4_hb68t")
+Button/styles/pressed = ExtResource("5_cupxh")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_right = 209.0
+offset_bottom = 136.0
+theme_override_styles/panel = ExtResource("1_u86pk")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 2
+texture = ExtResource("1_buchq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113
+anchor_top = 0.1
+anchor_right = 0.113
+anchor_bottom = 0.1
+offset_left = -130.176
+offset_top = -18.8
+offset_right = -102.176
+offset_bottom = 9.2
+grow_vertical = 2
+focus_mode = 0
+theme = SubResource("Theme_keqf7")

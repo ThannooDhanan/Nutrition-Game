@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://blxqflcbmg0gv"]
+
+[ext_resource type="PackedScene" uid="uid://bhvdpw0do7f8m" path="res://Scenes/Game Pieces/Picture_of_Food.tscn" id="1_xrq6k"]
+
+[node name="Pictures" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PictureOfFood" parent="." instance=ExtResource("1_xrq6k")]
+layout_mode = 2

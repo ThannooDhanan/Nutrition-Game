@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ytihgrolily"]
+
+[ext_resource type="LabelSettings" uid="uid://ct0r85ndf71bm" path="res://Scenes/UI/Font_Setting/significant_Words.tres" id="1_ok60p"]
+[ext_resource type="Script" path="res://Scripts/Menu/Signal Up/Signal_up_instructions.gd" id="1_vsjka"]
+[ext_resource type="Script" path="res://Scripts/Buttons/shiftDown.gd" id="2_3uflo"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vsjka")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.5
+offset_top = 81.0
+offset_right = 161.5
+offset_bottom = 154.0
+grow_horizontal = 2
+text = "Instructions"
+label_settings = ExtResource("1_ok60p")
+horizontal_alignment = 1
+
+[node name="Instruction" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.5
+offset_top = -32.0
+offset_right = 282.5
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Drag and connect a corresponding food to the organ that benefits from the food."
+autowrap_mode = 3
+visible_characters_behavior = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 451.0
+offset_right = 645.0
+offset_bottom = 579.0
+text = "Back"
+script = ExtResource("2_3uflo")
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

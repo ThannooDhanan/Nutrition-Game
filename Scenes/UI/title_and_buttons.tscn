@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://1kymo7h5j33h"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/shiftDown.gd" id="1_6d4rv"]
+[ext_resource type="Script" path="res://Scripts/Menu/Signal Up/Signal_up_title.gd" id="1_e8r7l"]
+[ext_resource type="LabelSettings" uid="uid://ct0r85ndf71bm" path="res://Scenes/UI/Font_Setting/significant_Words.tres" id="2_f3nun"]
+
+[node name="Title and Buttons" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_e8r7l")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -52.0
+offset_right = 82.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6d4rv")
+
+[node name="Label" type="Label" parent="Play"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.5
+offset_top = -11.5
+offset_right = 16.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="Instructions" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = 76.0
+offset_right = 81.0
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6d4rv")
+
+[node name="Label" type="Label" parent="Instructions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -11.5
+offset_right = 46.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Instructions"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.0
+offset_top = 81.0
+offset_right = 179.0
+offset_bottom = 148.0
+grow_horizontal = 2
+scale = Vector2(0.998246, 1)
+text = "Nutrition Game"
+label_settings = ExtResource("2_f3nun")
+
+[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Instructions" to="." method="_on_instructions_button_up"]
